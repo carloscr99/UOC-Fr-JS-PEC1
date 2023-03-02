@@ -32,8 +32,6 @@ function checkEmail(input) {
 function checkPassword(input) {
     const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?,.])[A-Za-z\d~`!@#$%^&*()_+\-=\{\}\|\[\]\\:";'<>?,.]{8,}$/;
 
-    console.log(input.value);
-
     if (re.test(String(input.value)))
         showSuccess(input);
     else
