@@ -102,3 +102,15 @@ form.addEventListener('submit', function (e) {
 
 
 });
+
+password.addEventListener('keyup', (e) =>{
+
+    checkPassword(password);
+
+});
+
+email.addEventListener('keyup', (e)=>{
+
+    checkEmail(email);
+
+});
