@@ -45,7 +45,7 @@ function updateSelectedCount() {
     const selectedSeatsCount = selectedSeats.length;
 
     count.innerText = selectedSeatsCount;
-    total.innerText = selectedSeatsCount * ticketPrice;
+    total.innerText = (selectedSeatsCount * ticketPrice).toFixed(2);
     currency.innerText = current_currency;
 
 }
@@ -70,7 +70,7 @@ function populateUI() {
 
     const currencyStored = localStorage.getItem('current_currency');
 
-    if (currencyStored === "")
+    if (currencyStored === null || currencyStored === "")
         current_currency = default_currency;
     else
         current_currency = currencyStored;
